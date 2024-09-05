@@ -1,0 +1,237 @@
+{
+ "meta": {
+  "creator": "cds-dk 8.1.2"
+ },
+ "$version": "2.0",
+ "definitions": {
+  "ZPARKINGLOT_ODATA_SRV": {
+   "kind": "service",
+   "@cds.external": true,
+   "@m.IsDefaultEntityContainer": "true",
+   "@sap.supported.formats": "atom json xlsx"
+  },
+  "ZPARKINGLOT_ODATA_SRV.zparkinglot1Set": {
+   "kind": "entity",
+   "@cds.external": true,
+   "@cds.persistence.skip": true,
+   "@sap.creatable": "false",
+   "@sap.updatable": "false",
+   "@sap.deletable": "false",
+   "@sap.pageable": "false",
+   "@sap.content.version": "1",
+   "elements": {
+    "ParkinglotNumber": {
+     "key": true,
+     "type": "cds.String",
+     "length": 16,
+     "@sap.unicode": "false",
+     "@sap.label": "parkinglot number",
+     "notNull": true
+    },
+    "Status": {
+     "type": "cds.String",
+     "length": 10,
+     "@sap.unicode": "false",
+     "@sap.label": "Status",
+     "@sap.quickinfo": "status details"
+    },
+    "TransportType": {
+     "type": "cds.String",
+     "length": 10,
+     "@sap.unicode": "false",
+     "@sap.label": "Transport type",
+     "@sap.quickinfo": "Transport type details"
+    }
+   }
+  },
+  "ZPARKINGLOT_ODATA_SRV.ZHISTORYSet": {
+   "kind": "entity",
+   "@cds.external": true,
+   "@cds.persistence.skip": true,
+   "@sap.creatable": "false",
+   "@sap.updatable": "false",
+   "@sap.deletable": "false",
+   "@sap.pageable": "false",
+   "@sap.content.version": "1",
+   "elements": {
+    "Id": {
+     "key": true,
+     "type": "cds.String",
+     "length": 36,
+     "@sap.unicode": "false",
+     "@sap.label": "ID",
+     "notNull": true
+    },
+    "ParkinglotNumber": {
+     "type": "cds.String",
+     "length": 8,
+     "@sap.unicode": "false",
+     "@sap.label": "parkinglot number"
+    },
+    "Drivername": {
+     "type": "cds.String",
+     "length": 30,
+     "@sap.unicode": "false",
+     "@sap.label": "Driver name",
+     "@sap.quickinfo": "Data element for Driver name"
+    },
+    "Phonenumber": {
+     "type": "cds.String",
+     "length": 10,
+     "@sap.unicode": "false",
+     "@sap.label": "phone number",
+     "@sap.quickinfo": "Details of phone number"
+    },
+    "Intime": {
+     "type": "cds.String",
+     "length": 25,
+     "@sap.unicode": "false",
+     "@sap.label": "In time"
+    },
+    "Outtime": {
+     "type": "cds.String",
+     "length": 25,
+     "@sap.unicode": "false",
+     "@sap.label": "Out time"
+    },
+    "VehicleNumber": {
+     "type": "cds.String",
+     "length": 10,
+     "@sap.unicode": "false",
+     "@sap.label": "Vehicle number"
+    },
+    "TransportType": {
+     "type": "cds.String",
+     "length": 10,
+     "@sap.unicode": "false",
+     "@sap.label": "Transport type",
+     "@sap.quickinfo": "Transport type details"
+    }
+   }
+  },
+  "ZPARKINGLOT_ODATA_SRV.ZASSIGNEDSet": {
+   "kind": "entity",
+   "@cds.external": true,
+   "@cds.persistence.skip": true,
+   "@sap.creatable": "false",
+   "@sap.updatable": "false",
+   "@sap.deletable": "false",
+   "@sap.pageable": "false",
+   "@sap.content.version": "1",
+   "elements": {
+    "Id": {
+     "key": true,
+     "type": "cds.String",
+     "length": 36,
+     "@sap.unicode": "false",
+     "@sap.label": "ID",
+     "notNull": true
+    },
+    "ParkinglotNumber": {
+     "type": "cds.String",
+     "length": 8,
+     "@sap.unicode": "false",
+     "@sap.label": "parkinglot number"
+    },
+    "Drivername": {
+     "type": "cds.String",
+     "length": 30,
+     "@sap.unicode": "false",
+     "@sap.label": "Driver name",
+     "@sap.quickinfo": "Data element for Driver name"
+    },
+    "Phonenumber": {
+     "type": "cds.String",
+     "length": 10,
+     "@sap.unicode": "false",
+     "@sap.label": "phone number",
+     "@sap.quickinfo": "Details of phone number"
+    },
+    "VehicleNumber": {
+     "type": "cds.String",
+     "length": 10,
+     "@sap.unicode": "false",
+     "@sap.label": "Vehicle number"
+    },
+    "Intime": {
+     "type": "cds.String",
+     "length": 25,
+     "@sap.unicode": "false",
+     "@sap.label": "In time"
+    },
+    "TransportType": {
+     "type": "cds.String",
+     "length": 10,
+     "@sap.unicode": "false",
+     "@sap.label": "Transport type",
+     "@sap.quickinfo": "Transport type details"
+    }
+   }
+  },
+  "ZPARKINGLOT_ODATA_SRV.ZRESERVESet": {
+   "kind": "entity",
+   "@cds.external": true,
+   "@cds.persistence.skip": true,
+   "@sap.creatable": "false",
+   "@sap.updatable": "false",
+   "@sap.deletable": "false",
+   "@sap.pageable": "false",
+   "@sap.content.version": "1",
+   "elements": {
+    "Id": {
+     "key": true,
+     "type": "cds.String",
+     "length": 36,
+     "@sap.unicode": "false",
+     "@sap.label": "ID",
+     "notNull": true
+    },
+    "ParkinglotNumber": {
+     "type": "cds.String",
+     "length": 8,
+     "@sap.unicode": "false",
+     "@sap.label": "parkinglot number"
+    },
+    "VendorName": {
+     "type": "cds.String",
+     "length": 10,
+     "@sap.unicode": "false",
+     "@sap.label": "Vendor name"
+    },
+    "VehicleNumber": {
+     "type": "cds.String",
+     "length": 10,
+     "@sap.unicode": "false",
+     "@sap.label": "Vehicle number"
+    },
+    "Drivername": {
+     "type": "cds.String",
+     "length": 30,
+     "@sap.unicode": "false",
+     "@sap.label": "Driver name",
+     "@sap.quickinfo": "Data element for Driver name"
+    },
+    "Phonenumber": {
+     "type": "cds.String",
+     "length": 10,
+     "@sap.unicode": "false",
+     "@sap.label": "phone number",
+     "@sap.quickinfo": "Details of phone number"
+    },
+    "TransportType": {
+     "type": "cds.String",
+     "length": 10,
+     "@sap.unicode": "false",
+     "@sap.label": "Transport type",
+     "@sap.quickinfo": "Transport type details"
+    },
+    "ReserveTime": {
+     "type": "cds.String",
+     "length": 25,
+     "@sap.unicode": "false",
+     "@sap.label": "In time"
+    }
+   }
+  }
+ }
+}

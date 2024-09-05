@@ -1,0 +1,39 @@
+{
+  "name": "Parkinglot_Odata",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap-cloud-sdk/http-client": "^3.17.0",
+    "@sap-cloud-sdk/resilience": "^3.17.0",
+    "@sap-cloud-sdk/util": "^3.17.0",
+    "@sap/cds": "^7",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^1",
+    "@sap/eslint-plugin-cds": "^3",
+    "@sap/ux-specification": "^1.120.17",
+    "eslint": "^9"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-parking-application": "cds watch --open parking-application/webapp/index.html?sap-ui-xx-viewCache=false"
+  },
+  "cds": {
+    "requires": {
+      "ZPARKINGLOT_ODATA_SRV": {
+        "kind": "odata-v2",
+        "model": "srv/external/ZPARKINGLOT_ODATA_SRV",
+        "credentials": {
+          "[development]": {
+            "url": "https://vhcalakeci.artihcus.com:44306/sap/opu/odata/sap/ZEWM_PARKINGLOT1_SRV/"
+          },
+          "[production]": {}
+        }
+      }
+    }
+  }
+}

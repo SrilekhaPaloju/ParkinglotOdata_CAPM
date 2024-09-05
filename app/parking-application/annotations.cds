@@ -1,0 +1,1 @@
+using externalSRV as service from '../../srv/external';
